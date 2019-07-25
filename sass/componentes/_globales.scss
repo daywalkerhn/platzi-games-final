@@ -1,10 +1,3 @@
-//ver diseno
-//explicar estructura completa
-//hacer header
-//hacer footer
-//hacer plantilla
-//pegar en todas las otras paginas
-
 //Variables
 $Fuente1: 'Lato', sans-serif;
 $Fuente2: 'Oswald', sans-serif;
@@ -28,7 +21,6 @@ $color-claro: #FFF;
 		font-weight: 700;
 	}
 }
-
 
 // Funciones
 @function get-opacity($color, $amount) {
