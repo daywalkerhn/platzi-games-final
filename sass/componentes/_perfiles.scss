@@ -1,0 +1,56 @@
+
+.perfil {
+	width: 50%;
+	padding-top: 50px;
+	color: $color-claro;
+	background-color: $color-secundario;	
+	&__avatar {
+		display: block;
+		margin: 0 auto;
+		border-radius: 50em;
+	}
+	&__nombre {
+		text-align: center;
+		font-size: 25px;
+		@include titulos($Fuente2);
+	}
+	&__titulo {
+		display: block;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 700;
+		font-size: 12px;
+				// incluir aca
+
+		color: get-opacity($color-claro, .5);
+
+	}
+	//2 agregar aca
+	&__boton {
+		display: block;
+		width: 100px;
+		height: 40px;
+		margin: 15px auto;
+		padding-top: 5px;
+		border-radius: 20px;
+		text-decoration: none;
+		text-align: center;
+		color: $color-claro;
+		@include titulos($Fuente2);
+				// incluir aca
+
+		border: 2px solid get-opacity($color-claro, .3);
+		background-color: get-opacity(#000, .1);
+	}
+}
+
+.perfil__minibio {
+	margin: 0 auto;
+	padding-top: 20px;
+	h2 {
+		@extend .perfil__nombre;
+	}
+	h3 {
+		@extend .perfil__titulo;
+	}
+}

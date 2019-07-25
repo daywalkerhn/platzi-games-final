@@ -1,0 +1,57 @@
+//ver diseno
+//explicar estructura completa
+//hacer header
+//hacer footer
+//hacer plantilla
+//pegar en todas las otras paginas
+
+//Variables
+$Fuente1: 'Lato', sans-serif;
+$Fuente2: 'Oswald', sans-serif;
+$color-primario: #333333;
+$color-secundario: #8841DA;
+$color-variacion: #3f579a;
+$color-claro: #FFF;
+
+//Mixins
+@mixin caja {
+	color: $color-primario;
+	box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.20);
+}
+
+@mixin titulos($fuente) {
+	@if $fuente ==$Fuente1 {
+		font-family: $Fuente1;
+	} @else {
+		font-family: $Fuente2;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+
+// Funciones
+@function get-opacity($color, $amount) {
+  @return rgba($color, $amount);
+}
+
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {
+  #{$header} {
+		font-size: $size;
+		@include titulos($Fuente2);
+		margin: 0;
+  }
+}
+
+body {
+	margin: 0;
+	background-color: #F9FAFC;
+	color: $color-primario;
+	@include titulos($Fuente1);
+}
+
+main {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+}
