@@ -1,0 +1,44 @@
+.header--principal {
+	display: flex;
+	padding: 0 20px 20px 20px;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 90px;
+	border-bottom: 1px solid #ebebeb;
+}
+.nav--header ul {
+	display: none;
+	padding-top: 35px;
+	li {
+		list-style: none;
+		margin-right: 50px;
+	}
+	a {
+		color: $color-variacion;
+		@include titulos($Fuente2);
+	}
+	@include media(desktop-s){
+		display:flex;
+	}
+}
+
+.header__busqueda {
+	display: none;
+	margin-left: auto;
+	padding-top: 35px;
+	&:hover {
+		text-decoration: none;
+	}
+	i {
+		font-size: 20px;
+		margin-right: 10px;
+		color: $color-secundario;
+	}
+	span {
+		color: $color-variacion;
+		@include titulos($Fuente2);	
+	}
+	@include media(desktop-s){
+		display:flex;
+	}
+}
